@@ -17,7 +17,7 @@ const Home = () => {
     <main>
       <Navbar/>
       <HeroSection/>
-      <Featured/>
+      {/* <Featured/> */}
       <Trending/>
       <TopSeller/>
       <Auction/>
@@ -26,7 +26,7 @@ const Home = () => {
       <Imaginations/>
       <Visibility/>
       <Faq/>
-      <Footer/>
+      {/* <Footer/> */}
     </main>
   )
 }

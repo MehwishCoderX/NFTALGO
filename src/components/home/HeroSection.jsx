@@ -1,7 +1,7 @@
 import React from "react";
 const HeroSection = () => {
   return (
-    <section className="text-center py-12 bg-[url(assets/images/hero-background.png)] ">
+    <section className="text-center py-12 bg-[url(assets/images/hero-background.png) ] ">
       {/* Main Heading */}
       <h1 className="text-black text-[5rem] md:text-7xl font-bold uppercase tracking-wide">
         Discover, Create & <br /> Sell Artworks.
