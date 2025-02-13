@@ -1,5 +1,11 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import { FreeMode } from "swiper/modules";
+import { motion } from "framer-motion";
 const HeroSection = () => {
+
   return (
     <section className="text-center py-12 bg-[url(assets/images/hero-background.png) ] ">
       {/* Main Heading */}
@@ -12,6 +18,10 @@ const HeroSection = () => {
         Discover and trade unique digital art pieces on our NFT website, <br />
         where creativity meets blockchain technology.
       </p>
+
+
+    
+      
     </section>
   );
 };

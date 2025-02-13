@@ -11,6 +11,7 @@ import Visibility from '../components/home/Visibility'
 import Faq from '../components/home/Faq'
 import Footer from '../components/layout/Footer'
 import Navbar from '../components/layout/Navbar'
+import ImageSwiper from '../components/home/Swiper'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Navbar/>
       <HeroSection/>
       {/* <Featured/> */}
+      {/* <ImageSwiper/> */}
       <Trending/>
       <TopSeller/>
       <Auction/>
@@ -26,7 +28,7 @@ const Home = () => {
       <Imaginations/>
       <Visibility/>
       <Faq/>
-      {/* <Footer/> */}
+      <Footer/>
     </main>
   )
 }
