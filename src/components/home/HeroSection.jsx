@@ -5,9 +5,9 @@ import CoverflowEffect from "./Swiper";
 const HeroSection = () => {
 
   return (
-    <section className=" hero-section text-center py-20">
+    <section className=" hero-section text-center py-20 ">
       {/* Main Heading */}
-      <h1 className="text-black text-[5rem] md:text-6xl pt-12 font-bold uppercase tracking-wide">
+      <h1 className="text-black text-[5rem] md:text-6xl pt-12 font-bold uppercase tracking-wide font-[APX K2]">
         Discover, Create & <br /> Sell Artworks.
       </h1>
 
