@@ -14,6 +14,10 @@ import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 
 export default function CoverflowEffect() {
+
+  // const Images[{img:avatarIImg},
+  //   {img:}
+  // ]
   return (
     <section>
       <div className="main">
@@ -31,6 +35,7 @@ export default function CoverflowEffect() {
             depth: 450,
             modifier: 1,
           }}
+
           breakpoints={{
             640: {
               slidesPerView: 1,

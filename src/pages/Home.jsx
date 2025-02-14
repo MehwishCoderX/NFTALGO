@@ -18,8 +18,6 @@ const Home = () => {
       <Navbar/>
       <HeroSection/>
       <Featured/>
-      {/* <CustomCard/> */}
-      {/* <ImageSwiper/> */}
       <Trending/>
       <TopSeller/>
       <Auction/>
