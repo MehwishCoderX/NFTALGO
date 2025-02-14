@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 // import "swiper/css/navigation";
 
 // Import required modules
-import { Autoplay, EffectCoverflow} from "swiper/modules";
+import { Autoplay, EffectCoverflow } from "swiper/modules";
 
 export default function CoverflowEffect() {
   return (
@@ -27,10 +27,9 @@ export default function CoverflowEffect() {
           effect={"coverflow"}
           coverflowEffect={{
             rotate: 10,
-            stretch: 50,
-            depth: 450,
+            stretch: 60,
+            depth: 500,
             modifier: 1,
-           
           }}
           breakpoints={{
             640: {
@@ -47,15 +46,13 @@ export default function CoverflowEffect() {
             },
           }}
         >
-          {[avatarIImg, avatarIIImg, avatarIIIImg, avatarIVImg, avatarVImg].map((img, index) => (
-            
-<SwiperSlide key={index}>
-                  <img src={img} alt="testimonial-avatar"  loading="lazy" />
-              
-            </SwiperSlide>
-            
-            
-          ))}
+          {[avatarIImg, avatarIIImg, avatarIIIImg, avatarIVImg, avatarVImg].map(
+            (img, index) => (
+              <SwiperSlide key={index}>
+                <img src={img} alt="testimonial-avatar" loading="lazy" />
+              </SwiperSlide>
+            )
+          )}
         </Swiper>
       </div>
     </section>

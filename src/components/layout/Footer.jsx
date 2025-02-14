@@ -4,7 +4,7 @@ import FooterLogo from '/assets/images/footer-logo.png'
 export default function Footer() {
   return (
 <>
-<div className="flex flex-col items-center justify-center space-y-6 p-8">
+<div className="flex flex-col items-center justify-around space-y-6 p-8">
       {/* Heading */}
       <h2 className="text-4xl font-bold  text-black">
         Ready for Next NFT Drop?
@@ -22,16 +22,18 @@ export default function Footer() {
         </button>
       </div>
     </div>
-    <footer className="bg-gradient-to-r from-red-500 to-red-600 text-white p-8 md:p-12 mx-28 rounded-2xl">
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start ">
-        
-        {/* Left Section - Logo & Text */}
-        <div className="md:w-2/5 space-y-4">
-          <div className="flex items-center space-x-2">
+    <footer  className="  bg-gradient-to-r font-[Roboto] from-red-500 to-red-600 text-white p-8 md:p-12 mx-28 rounded-2xl">
+   
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-16 items-start ">
+      <div className="flex items-center ">
             <img src={FooterLogo} alt="Fry Networks"  />
            
           </div>
+
+        {/* Left Section - Logo & Text */}
+        <div className="space-y-4">
+          
           <div>
           <p className="text-sm">
             NFT ALGO is the world’s leading NFTs marketplace where you can discover, sell, and bid NFTs and get rich.

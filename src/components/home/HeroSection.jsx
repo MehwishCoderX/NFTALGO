@@ -5,9 +5,9 @@ import CoverflowEffect from "./Swiper";
 const HeroSection = () => {
 
   return (
-    <section className=" hero-section text-center py-12 ] ">
+    <section className=" hero-section text-center py-20">
       {/* Main Heading */}
-      <h1 className="text-black text-[5rem] md:text-7xl font-bold uppercase tracking-wide">
+      <h1 className="text-black text-[5rem] md:text-6xl pt-12 font-bold uppercase tracking-wide">
         Discover, Create & <br /> Sell Artworks.
       </h1>
 
@@ -19,7 +19,7 @@ const HeroSection = () => {
       
       {/* swiper */}
     
-   <div className=" swiper py-16">
+   <div className=" py-24">
     
     
    <CoverflowEffect/>

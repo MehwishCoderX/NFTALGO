@@ -53,10 +53,10 @@ export default function NFTCarousel() {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto py-8">
+    <div className="relative w-full max-w-6xl mx-auto p-32">
       {/* Section Title */}
       <h1 className="text-4xl">Featured Collection</h1>
-      <h2 className="text-gray-400 text-lg text-center mb-6">
+      <h2 className="text-gray-400 text-lg text-center mb-6 font-[Roboto]">
         Explore our exclusive featured collection, showcasing innovative campaigns and creative storytelling from top brands around the world.
       </h2>
 

@@ -23,12 +23,12 @@ const Home = () => {
       <Trending/>
       <TopSeller/>
       <Auction/>
-      <Collection/>
+      {/* <Collection/> */}
       <Sold/>
       <Imaginations/>
       <Visibility/>
       <Faq/>
-      {/* <Footer/> */}
+      <Footer/>
     </main>
   )
 }
