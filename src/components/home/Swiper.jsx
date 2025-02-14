@@ -1,51 +1,63 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import React from "react";
+import avatarIImg from "/assets/images/img1.png";
+import avatarIIImg from "/assets/images/img2.png";
+import avatarIIIImg from "/assets/images/img3.png";
+import avatarIVImg from "/assets/images/img4.png";
+import avatarVImg from "/assets/images/img5.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+// import "swiper/css/navigation";
 
-const images = [
-  { src: '/image1.jpg', price: '142.02' },
-  { src: '/image2.jpg', price: '142.02' },
-  { src: '/image3.jpg', price: '142.02' },
-  { src: '/image4.jpg', price: '142.02' },
-  { src: '/image5.jpg', price: '142.02' }
-];
+// Import required modules
+import { Autoplay, EffectCoverflow} from "swiper/modules";
 
-export default function ImageSwiper() {
+export default function CoverflowEffect() {
   return (
-    <div className="max-w-4xl mx-auto py-10">
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 300,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="swiper-container"
-      >
-        {images.map((img, index) => (
-          <SwiperSlide key={index} className="bg-white rounded-xl shadow-lg p-4">
-            <div className="relative w-30 h-96 rounded-xl overflow-hidden">
-              <img
-                src={img.src}
-                alt="Swiper Slide"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute bottom-2 left-2 bg-white rounded-lg px-3 py-1 shadow-md">
-                <span className="text-black font-semibold">Price: {img.price}</span>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <section>
+      <div className="main">
+        <Swiper
+          loop={true}
+          // pagination={{ clickable: true }}
+          autoplay={{ delay: 3000 }}
+          // navigation={true}
+          modules={[EffectCoverflow]}
+          className="mySwiper"
+          effect={"coverflow"}
+          coverflowEffect={{
+            rotate: 10,
+            stretch: 50,
+            depth: 450,
+            modifier: 1,
+           
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 150,
+            },
+          }}
+        >
+          {[avatarIImg, avatarIIImg, avatarIIIImg, avatarIVImg, avatarVImg].map((img, index) => (
+            
+<SwiperSlide key={index}>
+                  <img src={img} alt="testimonial-avatar"  loading="lazy" />
+              
+            </SwiperSlide>
+            
+            
+          ))}
+        </Swiper>
+      </div>
+    </section>
   );
 }

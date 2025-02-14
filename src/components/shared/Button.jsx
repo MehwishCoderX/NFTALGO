@@ -24,6 +24,7 @@ const Button = ({
     height: height,
     width: width,
     padding: padding,
+    
   };
   if (loading) {
     disabled = true;

@@ -40,3 +40,31 @@ body {
 .container {
   max-width: 1320px;
 }
+
+.mySwiper {
+  width: 80%;
+}
+
+.nav-btn
+{
+  background-color: 'linear-gradient(45deg, #ff0000 30%, #ff4444 90%)'
+}
+
+.hero-section
+{
+  background-image: url('/assets/images/hero-background.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* Scales to cover the element */
+background-size: contain; 
+background-blend-mode: multiply;
+background-position: center; /* Centered */
+background-position: top right; /* Aligns to top-right */
+background-position: 0% 100%;
+background-size: 1220px 300px  ;
+padding: 5px; /* X% Y% positioning */
+/* Ensures the entire image is visible */
+}
+.swiper{
+ /* background-image: url('/assets/images/background-shade.png');
+ background-size: 1220px;  */
+}

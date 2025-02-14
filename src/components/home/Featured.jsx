@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import stellaImg from '/assets/images/stella.png';
 import FeaturedImg1 from '/assets/images/featured1.png'
 import FeaturedImg2 from '/assets/images/featured2.png'
 import FeaturedImg3 from '/assets/images/featured3.png'
@@ -8,28 +9,28 @@ import FeaturedImg4 from '/assets/images/featured4.png'
 const nftData = [
   {
     id: 1,
-    image: {FeaturedImg1},
+    image:  FeaturedImg1,
     name: "STELLA NOVA",
     username: "@Stella Nova",
     price: "142.02",
   },
   {
     id: 2,
-    image: {FeaturedImg2},
+    image:  FeaturedImg2,
     name: "STELLA NOVA",
     username: "@Stella Nova",
     price: "142.02",
   },
   {
     id: 3,
-    image: {FeaturedImg3},
+    image:  FeaturedImg3,
     name: "STELLA NOVA",
     username: "@Stella Nova",
     price: "142.02",
   },
   {
     id: 4,
-    image: {FeaturedImg4},
+    image:  FeaturedImg4,
     name: "STELLA NOVA",
     username: "@Stella Nova",
     price: "142.02",
@@ -88,13 +89,13 @@ export default function NFTCarousel() {
               {/* Profile Section */}
               <div className="flex items-center space-x-2 mb-3">
                 <img
-                  src="/assets/profile.png"
+                  src={stellaImg}
                   alt="profile"
                   className="w-8 h-8 rounded-full"
                 />
                 <div>
                   <p className="text-sm font-bold">{nft.name}</p>
-                  <p className="text-xs text-gray-500">{nft.username}</p>
+                  <p className="text-xs text-gray-500 font-[Roboto]">{nft.username}</p>
                 </div>
               </div>
 
@@ -128,3 +129,4 @@ export default function NFTCarousel() {
     </div>
   );
 }
+

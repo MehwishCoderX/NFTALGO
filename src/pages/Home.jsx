@@ -11,14 +11,14 @@ import Visibility from '../components/home/Visibility'
 import Faq from '../components/home/Faq'
 import Footer from '../components/layout/Footer'
 import Navbar from '../components/layout/Navbar'
-import ImageSwiper from '../components/home/Swiper'
 
 const Home = () => {
   return (
     <main>
       <Navbar/>
       <HeroSection/>
-      {/* <Featured/> */}
+      <Featured/>
+      {/* <CustomCard/> */}
       {/* <ImageSwiper/> */}
       <Trending/>
       <TopSeller/>

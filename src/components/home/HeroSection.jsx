@@ -1,13 +1,11 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
-import { FreeMode } from "swiper/modules";
-import { motion } from "framer-motion";
+import CoverflowEffect from "./Swiper";
 const HeroSection = () => {
 
   return (
-    <section className="text-center py-12 bg-[url(assets/images/hero-background.png) ] ">
+    <section className=" hero-section text-center py-12 ] ">
       {/* Main Heading */}
       <h1 className="text-black text-[5rem] md:text-7xl font-bold uppercase tracking-wide">
         Discover, Create & <br /> Sell Artworks.
@@ -18,9 +16,14 @@ const HeroSection = () => {
         Discover and trade unique digital art pieces on our NFT website, <br />
         where creativity meets blockchain technology.
       </p>
-
-
+      
+      {/* swiper */}
     
+   <div className=" swiper py-16">
+    
+    
+   <CoverflowEffect/>
+   </div>
       
     </section>
   );
