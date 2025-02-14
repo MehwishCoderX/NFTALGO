@@ -18,17 +18,17 @@ export default function CoverflowEffect() {
     <section>
       <div className="main">
         <Swiper
-          loop={true}
+          loop={false}
           // pagination={{ clickable: true }}
           autoplay={{ delay: 3000 }}
           // navigation={true}
           modules={[EffectCoverflow]}
-          className="mySwiper"
+          className="mySwiper shadow-[none]"
           effect={"coverflow"}
           coverflowEffect={{
             rotate: 10,
             stretch: 60,
-            depth: 500,
+            depth: 450,
             modifier: 1,
           }}
           breakpoints={{
@@ -49,7 +49,7 @@ export default function CoverflowEffect() {
           {[avatarIImg, avatarIIImg, avatarIIIImg, avatarIVImg, avatarVImg].map(
             (img, index) => (
               <SwiperSlide key={index}>
-                <img src={img} alt="testimonial-avatar" loading="lazy" />
+                <img src={img} alt="testimonial-avatar" loading="lazy"  className="duration-300 ease-in-out" />
               </SwiperSlide>
             )
           )}
