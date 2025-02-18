@@ -1,20 +1,25 @@
 
 // Import images
 import stellaImg from "/assets/images/stella.png";
-import FeaturedImg1 from "/assets/images/featured1.png";
-import FeaturedImg2 from "/assets/images/featured2.png";
-import FeaturedImg3 from "/assets/images/featured3.png";
-import FeaturedImg4 from "/assets/images/featured4.png";
+import TrendingImg1 from "/assets/images/trending1.png";
+// import TrendingImg2 from "/assets/images/trending2.png;
+import TrendingImg2 from '/assets/images/trending2.png'
+import TrendingImg3 from "/assets/images/trending3.png";
+import TrendingImg4 from "/assets/images/trending4.png";
+import TrendingImg5 from "/assets/images/trending5.png";
+import TrendingImg6 from "/assets/images/trending6.png";
+import TrendingImg7 from "/assets/images/trending7.png";
+import TrendingImg8 from "/assets/images/trending8.png";
 
 const nftData = [
-  { id: 1, image: FeaturedImg1, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 2, image: FeaturedImg2, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 3, image: FeaturedImg3, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 4, image: FeaturedImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 5, image: FeaturedImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 6, image: FeaturedImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  {id: 7, image: FeaturedImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 8, image: FeaturedImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 1, image: TrendingImg1, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 2, image: TrendingImg2, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 3, image: TrendingImg3, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 4, image: TrendingImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 5, image: TrendingImg5, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 6, image: TrendingImg6, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  {id: 7, image: TrendingImg7, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 8, image:TrendingImg8, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
   
 ];
 
@@ -28,7 +33,7 @@ export default function Trending() {
       {/* NFT Grid */}
       <div className="grid grid-cols-1 mx-4 md:grid-cols-4 gap-2  ">
         {nftData.map((nft) => (
-          <div key={nft.id} className=" trend-card p-4 flex flex-col gap-2 shadow-lg rounded-lg overflow-hidden">
+          <div key={nft.id} className=" trend-card p-4 flex flex-col gap-4 shadow-lg rounded-lg overflow-hidden">
             {/* Profile Section */}
             <div className="flex items-center gap-3">
               <img src={stellaImg} alt="profile" className="w-10 h-10 rounded-full" />

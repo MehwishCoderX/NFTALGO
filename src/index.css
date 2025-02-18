@@ -167,5 +167,5 @@ padding: 5px; /* X% Y% positioning */
 
 /* Social Icon Component */
 .btn-social {
-  @apply p-2 bg-white rounded-full text-red-500 hover:bg-gray-200 cursor-pointer transition-all;
+  @apply p-2 bg-white rounded-xl text-red-500 hover:bg-gray-200 cursor-pointer transition-all;
 }

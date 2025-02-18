@@ -2,20 +2,24 @@
 
 // Import images
 import stellaImg from "/assets/images/stella.png";
-import FeaturedImg1 from "/assets/images/featured1.png";
-import FeaturedImg2 from "/assets/images/featured2.png";
-import FeaturedImg3 from "/assets/images/featured3.png";
-import FeaturedImg4 from "/assets/images/featured4.png";
+import AuctionImg1 from "/assets/images/Auction1.png";
+import AuctionImg2 from "/assets/images/Auction2.png";
+import AuctionImg3 from "/assets/images/Auction3.png";
+import AuctionImg4 from "/assets/images/Auction4.png";
+import AuctionImg5 from "/assets/images/Auction5.png";
+import AuctionImg6 from "/assets/images/Auction6.png";
+import AuctionImg7 from "/assets/images/Auction7..png";
+import AuctionImg8 from "/assets/images/Auction8.png";
 
 const nftData = [
-  { id: 1, image: FeaturedImg1, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 2, image: FeaturedImg2, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 3, image: FeaturedImg3, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 4, image: FeaturedImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 5, image: FeaturedImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 6, image: FeaturedImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  {id: 7, image: FeaturedImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
-  { id: 8, image: FeaturedImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 1, image: AuctionImg1, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 2, image: AuctionImg2, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 3, image: AuctionImg3, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 4, image: AuctionImg4, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 5, image: AuctionImg5, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 6, image: AuctionImg6, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  {id: 7, image: AuctionImg7, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
+  { id: 8, image:AuctionImg8, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
   
 ];
 
@@ -44,9 +48,9 @@ export default function Auction() {
               <img src={nft.image} alt={nft.name} className="w-full h-full object-cover" />
 
               {/* Buy Overlay Section */}
-              <div className="absolute bottom-30 left-32 transform -translate-x-1/2 w-[90%] flex justify-between items-center md p-2 rounded-lg">
+              {/* <div className="absolute bottom-30 left-32 transform -translate-x-1/2 w-[90%] flex justify-between items-center md p-2 rounded-lg">
                 <button className=" bg-white  text-gray-600 px-4 py-1 rounded-md">3:06:59:18</button>
-                </div>
+                </div> */}
               
           
             </div>

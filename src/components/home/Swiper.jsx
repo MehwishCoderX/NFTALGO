@@ -1,3 +1,4 @@
+
 import React from "react";
 import avatarIImg from "/assets/images/img1.png";
 import avatarIIImg from "/assets/images/img2.png";
@@ -8,53 +9,43 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-// import "swiper/css/navigation";
-
-// Import required modules
-import { Autoplay, EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow } from "swiper/modules";
 
 export default function CoverflowEffect() {
-
-  // const Images[{img:avatarIImg},
-  //   {img:}
-  // ]
   return (
-    <section>
-      <div className="main">
+    <section className="w-full px-4 md:px-8 lg:px-16 xl:px-24 py-8">
+      <div className="max-w-7xl mx-auto">
         <Swiper
-          loop={false}
-          // pagination={{ clickable: true }}
-          autoplay={{ delay: 3000 }}
-          // navigation={true}
+          loop={true}
           modules={[EffectCoverflow]}
           className="mySwiper shadow-[none]"
           effect={"coverflow"}
           coverflowEffect={{
             rotate: 10,
-            stretch: 60,
-            depth: 450,
+            stretch: 50,
+            depth: 300,
             modifier: 1,
+            slideShadows: true,
           }}
-
+          centeredSlides={true}
+          slidesPerView={1}
           breakpoints={{
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 150,
-            },
+            480: { slidesPerView: 1, spaceBetween: 10 },
+            640: { slidesPerView: 2, spaceBetween: 20 },
+            768: { slidesPerView: 3, spaceBetween: 30 },
+            1024: { slidesPerView: 3, spaceBetween: 50 },
+            1280: { slidesPerView: 4, spaceBetween: 70 },
           }}
         >
           {[avatarIImg, avatarIIImg, avatarIIIImg, avatarIVImg, avatarVImg].map(
             (img, index) => (
-              <SwiperSlide key={index}>
-                <img src={img} alt="testimonial-avatar" loading="lazy"  className="duration-300 ease-in-out" />
+              <SwiperSlide key={index} className="flex justify-center items-center">
+                <img
+                  src={img}
+                  alt="testimonial-avatar"
+                  loading="lazy"
+                  className="w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg rounded-lg shadow-lg duration-300 ease-in-out transform hover:scale-105"
+                />
               </SwiperSlide>
             )
           )}

@@ -36,6 +36,8 @@ const ArtworkCard = ({ artwork }) => {
 
 const Collection = () => {
   const artworks = [
+   
+   
     {
       title: "WONDERFUL ARTWORK",
       creator: "Jacob Jones",
@@ -54,12 +56,12 @@ const Collection = () => {
       creator: "Jacob Jones",
       creatorImage: "/assets/images/collectioni.png",
       images: [
-        "/assets/images/collection1i.png", 
-        "/assets/images/collection2i.png", 
-        "/assets/images/collection3i.png", 
-        "/assets/images/collection4i.png", 
-        "/assets/images/collection5i.png", 
-        "/assets/images/collection6i.png"
+        "/assets/images/collection1j.png", 
+        "/assets/images/collection2j.png", 
+        "/assets/images/collection3j.png", 
+        "/assets/images/collection4j.png", 
+        "/assets/images/collection5j.png", 
+        "/assets/images/collection6j.png"
       ]
     },
     {
@@ -67,38 +69,12 @@ const Collection = () => {
       creator: "Jacob Jones",
       creatorImage: "/assets/images/collectioni.png",
       images: [
-        "/assets/images/collection1i.png", 
-        "/assets/images/collection2i.png", 
-        "/assets/images/collection3i.png", 
-        "/assets/images/collection4i.png", 
-        "/assets/images/collection5i.png", 
-        "/assets/images/collection6i.png"
-      ]
-    },
-    {
-      title: "WONDERFUL ARTWORK",
-      creator: "Jacob Jones",
-      creatorImage: "/assets/images/collectioni.png",
-      images: [
-        "/assets/images/collection1i.png", 
-        "/assets/images/collection2i.png", 
-        "/assets/images/collection3i.png", 
-        "/assets/images/collection4i.png", 
-        "/assets/images/collection5i.png", 
-        "/assets/images/collection6i.png"
-      ]
-    },
-    {
-      title: "WONDERFUL ARTWORK",
-      creator: "Jacob Jones",
-      creatorImage: "/assets/images/collectioni.png",
-      images: [
-        "/assets/images/collection1i.png", 
-        "/assets/images/collection2i.png", 
-        "/assets/images/collection3i.png", 
-        "/assets/images/collection4i.png", 
-        "/assets/images/collection5i.png", 
-        "/assets/images/collection6i.png"
+        "/assets/images/collection1k.png", 
+        "/assets/images/collection2k.png", 
+        "/assets/images/collection3k.png", 
+        "/assets/images/collection4k.png", 
+        "/assets/images/collection5k.png", 
+        "/assets/images/collection6k.png"
       ]
     },
   ];
