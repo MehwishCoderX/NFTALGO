@@ -28,7 +28,11 @@ export default function Footer() {
             className="email-input"
           />
           <button className="btn-send">
-            <PaperAirplaneIcon className="h-6 w-6 text-white" />
+          <img
+    src="/assets/icons/footer-input-icon.png"
+    alt="Custom Icon"
+    className="w-6 h-6 "
+  />
           </button>
         </div>
       </div>

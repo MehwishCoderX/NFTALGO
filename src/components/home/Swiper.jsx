@@ -1,4 +1,3 @@
-
 import React from "react";
 import avatarIImg from "/assets/images/img1.png";
 import avatarIIImg from "/assets/images/img2.png";
@@ -39,7 +38,10 @@ export default function CoverflowEffect() {
         >
           {[avatarIImg, avatarIIImg, avatarIIIImg, avatarIVImg, avatarVImg].map(
             (img, index) => (
-              <SwiperSlide key={index} className="flex justify-center items-center">
+              <SwiperSlide
+                key={index}
+                className="flex justify-center items-center"
+              >
                 <img
                   src={img}
                   alt="testimonial-avatar"

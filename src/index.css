@@ -82,6 +82,19 @@ padding: 5px; /* X% Y% positioning */
  background-size: contain ;
  
  }
+ 
+ .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 10vh;
+  background-image: url('/assets/images/circle.svg');
+  background-size: 200px;
+  background-position: center;
+  filter: blur(0px);
+}
+
 
 
  /* Hide scrollbar for IE, Edge, and Firefox */

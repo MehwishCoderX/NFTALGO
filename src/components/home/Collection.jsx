@@ -21,7 +21,7 @@ const ArtworkCard = ({ artwork }) => {
         <img
           src={artwork.creatorImage}
           alt="creator"
-          className="w-10 h-10 rounded-full mr-3"
+          className="w-10 h-10  mr-3"
         />
         <div className="font-[Roboto]">
           <h3 className="font-bold text-lg">{artwork.title}</h3>
@@ -54,20 +54,20 @@ const Collection = () => {
     {
       title: "WONDERFUL ARTWORK",
       creator: "Jacob Jones",
-      creatorImage: "/assets/images/collectioni.png",
+      creatorImage: "/assets/images/collection2p.png",
       images: [
         "/assets/images/collection1j.png", 
         "/assets/images/collection2j.png", 
         "/assets/images/collection3j.png", 
         "/assets/images/collection4j.png", 
-        "/assets/images/collection5j.png", 
-        "/assets/images/collection6j.png"
+        "/assets/images/Collection6j.png", 
+        "/assets/images/Collection7j.png"
       ]
     },
     {
       title: "WONDERFUL ARTWORK",
       creator: "Jacob Jones",
-      creatorImage: "/assets/images/collectioni.png",
+      creatorImage: "/assets/images/collection3p.png",
       images: [
         "/assets/images/collection1k.png", 
         "/assets/images/collection2k.png", 
@@ -82,7 +82,7 @@ const Collection = () => {
   return (
     <div className="flex flex-col items-center">
    <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold sm: text-xl">Top Collection</h2>
+        <h2 className="text-6xl font-bold sm: text-xl">Top Collection</h2>
         <a href="#" className="text-red-500 font-semibold font-[Roboto]">View All</a>
       </div>
       <div className="flex flex-wrap gap-6 justify-center">

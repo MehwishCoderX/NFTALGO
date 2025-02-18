@@ -19,8 +19,8 @@ const HeroSection = () => {
       
       {/* swiper */}
     
-   <div className=" py-24">
-    
+   <div className=" py-24 z-1">
+  
     
    <CoverflowEffect/>
    </div>

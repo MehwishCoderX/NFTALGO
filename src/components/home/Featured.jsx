@@ -1,9 +1,6 @@
 
-
-
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Import images
 import stellaImg from "/assets/images/stella.png";
@@ -38,13 +35,25 @@ export default function NFTCarousel() {
       </h2>
 
       {/* Navigation Buttons */}
-      <div className="flex justify-center sm:justify-end space-x-2 mb-4">
-        <button onClick={() => scroll("left")} className="bg-red-500 p-2 rounded-full shadow-md">
-          <ChevronLeft className="text-white w-6 h-6" />
+      <div className="flex justify-center sm:justify-end space-x-2 mb-4 gap-4">
+        <button onClick={() => scroll("left")} className="bg-red-500 rounded-md transform rotate-45 p-2 shadow-md w-12 h-12 flex items-center justify-center">
+        <img
+    src="/assets/icons/arrow-backward.png"
+    alt="Custom Icon"
+    className="w-6 h-6 -rotate-45"
+  />
         </button>
-        <button onClick={() => scroll("right")} className="bg-red-500 p-2 rounded-full shadow-md">
-          <ChevronRight className="text-white w-6 h-6" />
-        </button>
+        <button
+  onClick={() => scroll("right")}
+  className="bg-red-500 rounded-md transform rotate-45 p-2 shadow-md w-12 h-12 flex items-center justify-center "
+>
+  <img
+    src="/assets/icons/arrow-forward.png"
+    alt="Custom Icon"
+    className="w-6 h-6 -rotate-45"
+  />
+</button>
+
       </div>
 
       {/* NFT Card Carousel */}
