@@ -21,10 +21,10 @@ const Home = () => {
       <Trending/>
       <TopSeller/>
       <Auction/>
-      {/* <Collection/> */}
+      <Collection/>
       <Sold/>
       <Imaginations/>
-      <Visibility/>
+      {/* <Visibility/> */}
       <Faq/>
       <Footer/>
     </main>

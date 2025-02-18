@@ -70,7 +70,7 @@ const TopSeller = () => {
         {nfts.map((nft) => (
           <div
             key={nft.id}
-            className="bg-gray-100 p-4 rounded-lg flex flex-col items-center"
+            className="p-4 rounded-lg flex  items-center gap-2 font-[Roboto]"
           >
             <div className="relative">
               <img
@@ -80,8 +80,11 @@ const TopSeller = () => {
               />
              
             </div>
+            <div>
             <p className="text-lg font-semibold mt-2">{nft.name}</p>
             <p className="text-gray-500 text-sm">{nft.price}</p>
+            </div>
+            
           </div>
         ))}
       </div>

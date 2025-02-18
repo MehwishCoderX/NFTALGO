@@ -1,12 +1,21 @@
+
+
 import React from "react";
 
 const ArtworkCard = ({ artwork }) => {
   return (
     <div className="bg-white rounded-2xl shadow-lg p-4 w-80">
-      <div className="grid grid-cols-2 gap-2">
-        {artwork.images.map((img, index) => (
-          <img key={index} src={img} alt="artwork" className="rounded-lg" />
+      <div className="grid grid-cols-2 gap-4">
+        {/* First row with 2 images */}
+        {artwork.images.slice(0, 2).map((img, index) => (
+          <img key={index} src={img} alt={`artwork-${index}`} className="rounded-lg w-full h-24 object-cover col-span-1" />
         ))}
+        {/* Second row with 4 images */}
+        <div className="grid grid-cols-4 gap-4 col-span-2">
+          {artwork.images.slice(2, 6).map((img, index) => (
+            <img key={index} src={img} alt={`artwork-${index}`} className="rounded-lg w-full h-20 object-cover" />
+          ))}
+        </div>
       </div>
       <div className="flex items-center mt-4">
         <img
@@ -16,7 +25,9 @@ const ArtworkCard = ({ artwork }) => {
         />
         <div>
           <h3 className="font-bold text-lg">{artwork.title}</h3>
-          <p className="text-gray-600 text-sm">Created by <strong>{artwork.creator}</strong></p>
+          <p className="text-gray-600 text-sm">
+            Created by <strong>{artwork.creator}</strong>
+          </p>
         </div>
       </div>
     </div>
@@ -28,46 +39,81 @@ const Collection = () => {
     {
       title: "WONDERFUL ARTWORK",
       creator: "Jacob Jones",
-      creatorImage: "https://via.placeholder.com/40",
+      creatorImage: "/assets/images/collectioni.png",
       images: [
-        "https://via.placeholder.com/100/FF5733", 
-        "https://via.placeholder.com/100/6A0DAD",
-        "https://via.placeholder.com/100/FFD700",
-        "https://via.placeholder.com/100/1E90FF"
+        "/assets/images/collection1i.png", 
+        "/assets/images/collection2i.png", 
+        "/assets/images/collection3i.png", 
+        "/assets/images/collection4i.png", 
+        "/assets/images/collection5i.png", 
+        "/assets/images/collection6i.png"
       ]
     },
     {
       title: "WONDERFUL ARTWORK",
       creator: "Jacob Jones",
-      creatorImage: "https://via.placeholder.com/40",
+      creatorImage: "/assets/images/collectioni.png",
       images: [
-        "https://via.placeholder.com/100/FFFF00", 
-        "https://via.placeholder.com/100/ADD8E6",
-        "https://via.placeholder.com/100/87CEEB",
-        "https://via.placeholder.com/100/FFA07A"
+        "/assets/images/collection1i.png", 
+        "/assets/images/collection2i.png", 
+        "/assets/images/collection3i.png", 
+        "/assets/images/collection4i.png", 
+        "/assets/images/collection5i.png", 
+        "/assets/images/collection6i.png"
       ]
     },
     {
       title: "WONDERFUL ARTWORK",
       creator: "Jacob Jones",
-      creatorImage: "https://via.placeholder.com/40",
+      creatorImage: "/assets/images/collectioni.png",
       images: [
-        "https://via.placeholder.com/100/DC143C", 
-        "https://via.placeholder.com/100/4169E1",
-        "https://via.placeholder.com/100/DA70D6",
-        "https://via.placeholder.com/100/2E8B57"
+        "/assets/images/collection1i.png", 
+        "/assets/images/collection2i.png", 
+        "/assets/images/collection3i.png", 
+        "/assets/images/collection4i.png", 
+        "/assets/images/collection5i.png", 
+        "/assets/images/collection6i.png"
       ]
-    }
+    },
+    {
+      title: "WONDERFUL ARTWORK",
+      creator: "Jacob Jones",
+      creatorImage: "/assets/images/collectioni.png",
+      images: [
+        "/assets/images/collection1i.png", 
+        "/assets/images/collection2i.png", 
+        "/assets/images/collection3i.png", 
+        "/assets/images/collection4i.png", 
+        "/assets/images/collection5i.png", 
+        "/assets/images/collection6i.png"
+      ]
+    },
+    {
+      title: "WONDERFUL ARTWORK",
+      creator: "Jacob Jones",
+      creatorImage: "/assets/images/collectioni.png",
+      images: [
+        "/assets/images/collection1i.png", 
+        "/assets/images/collection2i.png", 
+        "/assets/images/collection3i.png", 
+        "/assets/images/collection4i.png", 
+        "/assets/images/collection5i.png", 
+        "/assets/images/collection6i.png"
+      ]
+    },
   ];
 
   return (
     <div className="flex flex-col items-center">
-      <div className="flex gap-6">
+      <h1 className="text-4xl font-bold mb-8 text-left">Top Collecttion</h1>
+      <div className="flex flex-wrap gap-6 justify-center">
         {artworks.map((artwork, index) => (
           <ArtworkCard key={index} artwork={artwork} />
         ))}
       </div>
-      <p className="text-red-500 font-bold text-lg mt-4">View More Collection</p>
+      <p className="text-red-500 font-bold text-lg mt-4 cursor-pointer hover:underline">
+        View More Collection
+      </p>
     </div>
   );
 };
