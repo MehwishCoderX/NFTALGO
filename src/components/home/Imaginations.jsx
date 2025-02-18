@@ -17,9 +17,7 @@ export default function GenerateNFT() {
   const [generatedNFTs, setGeneratedNFTs] = useState([]);
 
   const handleGenerate = () => {
-    // Mock NFT generation (Select 3 random NFTs)
-    const shuffledNFTs = [...nftData].sort(() => 0.5 - Math.random());
-    setGeneratedNFTs(shuffledNFTs.slice(0, 3));
+  
   };
 
   return (
@@ -39,7 +37,7 @@ export default function GenerateNFT() {
           className="px-6 py-3 bg-red-600 text-white font-semibold rounded-r-full hover:bg-red-700 transition"
           aria-label="Generate NFT"
         >
-          Generate 🚀
+          Generate 
         </button>
       </div>
 

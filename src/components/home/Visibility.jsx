@@ -4,7 +4,7 @@ const nftData = {
   title: "Boost Your NFTs: Enhance Visibility and Value",
   description:
     "The Boost feature is a premium service that allows NFT creators and collectors to elevate their listings on our marketplace. By boosting an NFT, you can ensure it appears prominently in search results, featured sections, and on the homepage, maximizing exposure to potential buyers.",
-  buttonText: "Boost 🚀",
+  
   image: "/assets/images/visibility.png", // Replace with actual image path
 };
 
@@ -20,10 +20,10 @@ export default function Visibility() {
           {nftData.description}
         </p>
         <button
-          className="mt-6 px-6 py-3 text-white bg-red-600 rounded-lg hover:bg-red-700 transition focus:ring-4 focus:ring-red-500"
+          className="mt-6 px-6 py-3 flex gap-2 text-white bg-red-600 rounded-lg hover:bg-red-700 transition focus:ring-4 focus:ring-red-500"
           aria-label="Boost your NFT"
         >
-          {nftData.buttonText}
+          Booster <span><img src="/assets/icons/Booster.png"/></span> 
         </button>
       </div>
 

@@ -2,7 +2,6 @@
 // Import images
 import stellaImg from "/assets/images/stella.png";
 import TrendingImg1 from "/assets/images/trending1.png";
-// import TrendingImg2 from "/assets/images/trending2.png;
 import TrendingImg2 from '/assets/images/trending2.png'
 import TrendingImg3 from "/assets/images/trending3.png";
 import TrendingImg4 from "/assets/images/trending4.png";
