@@ -25,7 +25,12 @@ const nftData = [
 
 export default function Trending() {
   return (
+    <>
+    <div className=" relative -ml-24">  
+       <div className="absolute inset-0  circle  red blur z-0 "></div>
+       </div>
     <div className="relative w-full max-w-6xl mx-auto p-10">
+       
       {/* Section Title */}
       <h1 className="text-4xl font-bold mb-8 text-left md:text-4xl sm:text-2xl">Trending NFT'S</h1>
 
@@ -65,5 +70,6 @@ export default function Trending() {
         ))}
       </div>
     </div>
+    </>
   );
 }
