@@ -23,10 +23,10 @@ export default function Trending() {
   return (
     <div className="relative w-full max-w-6xl mx-auto p-10">
       {/* Section Title */}
-      <h1 className="text-4xl font-bold mb-8 text-center">Trending NFT'S</h1>
+      <h1 className="text-4xl font-bold mb-8 text-left md:text-4xl sm:text-2xl">Trending NFT'S</h1>
 
       {/* NFT Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 mx-4 md:grid-cols-4 gap-2  ">
         {nftData.map((nft) => (
           <div key={nft.id} className=" trend-card p-4 flex flex-col gap-2 shadow-lg rounded-lg overflow-hidden">
             {/* Profile Section */}
@@ -43,12 +43,17 @@ export default function Trending() {
               <img src={nft.image} alt={nft.name} className="w-full h-full object-cover" />
 
               {/* Buy Overlay Section */}
-              <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[90%] flex justify-between items-center bg-black/60 backdrop-blur-md p-2 rounded-lg">
+              <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[90%] flex justify-between font-[Roboto] items-center gap-2   p-2 rounded-lg">
                 <button className="bg-red-500 text-white px-4 py-1 rounded-md">Buy</button>
-                <div className="flex items-center text-white">
-                  <span className="text-sm font-semibold">Price:</span>
+                <div className="flex items-center  bg-white shadow-2xl rounded-md px-4 py-1">
+                  <span className="text-[10px ] font-semibold">Price:</span>
+                  <img
+                  src="/assets/images/price.png"
+                  alt="crypto"
+                  className="w-4 h-4 ml-1"
+                />
                   <span className="ml-1 font-bold">{nft.price}</span>
-                  <img src="/assets/crypto-icon.png" alt="crypto" className="w-4 h-4 ml-1" />
+                
                 </div>
               </div>
             </div>

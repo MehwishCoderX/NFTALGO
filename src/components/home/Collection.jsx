@@ -23,7 +23,7 @@ const ArtworkCard = ({ artwork }) => {
           alt="creator"
           className="w-10 h-10 rounded-full mr-3"
         />
-        <div>
+        <div className="font-[Roboto]">
           <h3 className="font-bold text-lg">{artwork.title}</h3>
           <p className="text-gray-600 text-sm">
             Created by <strong>{artwork.creator}</strong>
@@ -105,15 +105,16 @@ const Collection = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold mb-8 text-left">Top Collecttion</h1>
+   <div className="flex justify-between items-center mb-4">
+        <h2 className="text-xl font-bold sm: text-xl">Top Collection</h2>
+        <a href="#" className="text-red-500 font-semibold font-[Roboto]">View All</a>
+      </div>
       <div className="flex flex-wrap gap-6 justify-center">
         {artworks.map((artwork, index) => (
           <ArtworkCard key={index} artwork={artwork} />
         ))}
       </div>
-      <p className="text-red-500 font-bold text-lg mt-4 cursor-pointer hover:underline">
-        View More Collection
-      </p>
+      
     </div>
   );
 };

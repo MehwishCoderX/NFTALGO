@@ -42,7 +42,7 @@ export default function FAQ() {
             <button
               onClick={() => toggleFAQ(index)}
               className={`w-full text-left px-4 py-3 flex items-center ${
-                openIndex === index ? "bg-red-300 rounded-xl m-1 w-[80%] mr-11 text-white" : "bg-white text-black"
+                openIndex === index ? "bg-red-300 rounded-xl m-1 w-[80%] mr-11 text-white" : " text-black"
               }`}
               aria-expanded={openIndex === index}
               aria-controls={`faq-${index}`}

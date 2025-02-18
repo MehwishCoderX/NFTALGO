@@ -41,12 +41,17 @@ const Sold = () => {
               )}
 
               {/* Buy Overlay Section */}
-              <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[90%] flex justify-between items-center bg-black/60 backdrop-blur-md p-2 rounded-lg">
+              <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[90%] flex justify-between font-[Roboto] items-center gap-2   p-2 rounded-lg">
                 <button className="bg-red-500 text-white px-4 py-1 rounded-md">Buy</button>
-                <div className="flex items-center text-white">
-                  <span className="text-sm font-semibold">Price:</span>
+                <div className="flex items-center  bg-white shadow-2xl rounded-md px-4 py-1">
+                  <span className="text-[10px ] font-semibold">Price:</span>
+                  <img
+                  src="/assets/images/price.png"
+                  alt="crypto"
+                  className="w-4 h-4 ml-1"
+                />
                   <span className="ml-1 font-bold">{nft.price}</span>
-                  <img src="/assets/crypto-icon.png" alt="crypto" className="w-4 h-4 ml-1" />
+                
                 </div>
               </div>
             </div>

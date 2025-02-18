@@ -14,7 +14,7 @@
 body {
   font-family: 'APX K2', 'Roboto', sans-serif;
   background-color: #FFF9F9;
-  overflow-x: hidden;
+  overflow-x: hi;
 }
 
 :root {
@@ -71,7 +71,7 @@ padding: 5px; /* X% Y% positioning */
  {
  background-image: url('/assets/images/card-bg.png');
  background-repeat: no-repeat;
- background-size: 210px 311px  ;
+ background-size: 280px 311px  ;
  
 
  }
