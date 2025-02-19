@@ -6,7 +6,7 @@ import AuctionImg3 from "/assets/images/Auction3.png";
 import AuctionImg4 from "/assets/images/Auction4.png";
 import AuctionImg5 from "/assets/images/Auction5.png";
 import AuctionImg6 from "/assets/images/Auction6.png";
-import AuctionImg7 from "/assets/images/Auction7..png";
+import AuctionImg7 from "/assets/images/Auction7.png";
 import AuctionImg8 from "/assets/images/Auction8.png";
 import Button from "../shared/Button";
 
@@ -111,11 +111,11 @@ export default function Auction() {
               </div>
 
               {/* NFT Image Section */}
-              <div className="relative w-full h-[300px] overflow-hidden rounded-lg">
+              <div className="relative  overflow-hidden rounded-lg">
                 <img
                   src={nft.image}
                   alt={nft.name}
-                  className="w-full h-full object-cover"
+                  className=""
                 />
 
                 {/* Buy Overlay Section */}

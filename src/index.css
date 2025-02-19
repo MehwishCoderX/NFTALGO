@@ -87,9 +87,8 @@ body {
 .trend-card {
   background-image: url("/assets/images/card-bg.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
 }
-
 .circle {
   /* position: fixed; */
   width: 50vw;
