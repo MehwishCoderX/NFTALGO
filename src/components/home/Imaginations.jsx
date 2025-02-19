@@ -86,7 +86,7 @@ const ImageGenerator = () => {
         <h1 className=" text-6xl uppercase">Turn your imagination into digital Asset </h1>
       </div>
     <div className="relative w-full h-screen flex items-center justify-center px-36">
-      {/* Red glowing effect */}
+   
     
 
       {/* Input section */}

@@ -26,7 +26,7 @@ const Home = () => {
       <Imaginations/>
       <Visibility/>
       <Faq/>
-      {/* <Footer/> */}
+      <Footer/>
     </main>
   )
 }
