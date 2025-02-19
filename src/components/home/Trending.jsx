@@ -52,8 +52,8 @@ export default function Trending() {
             </div>
 
             {/* NFT Image Section */}
-            <div className="relative w-full h-[300px] overflow-hidden rounded-lg">
-              <img src={nft.image} alt={nft.name} className="w-full h-full object-cover" />
+            <div className="relative  overflow-hidden rounded-lg">
+              <img src={nft.image} alt={nft.name} className="" />
 
               {/* Buy Overlay Section */}
               <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[90%] flex justify-between font-[Roboto] items-center gap-2   p-2 rounded-lg">
