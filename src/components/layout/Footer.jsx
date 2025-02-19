@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-gradient flex font-[Roboto]    text-white md: rounded-2xl font-roboto lg:mx-32 sm:mx-0 sm:py-12 rounded-sm">
+      <footer className="bg-gradient flex font-[Roboto]    text-white md: rounded-2xl font-roboto lg:mx-32 sm:mx-0  rounded-sm">
         
       <div className=" md:mb-0">
             <img
