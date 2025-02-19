@@ -10,7 +10,12 @@ const nftData = {
 
 export default function Visibility() {
   return (
-    <div className="flex flex-col-reverse lg:flex-row items-center gap-10 max-w-5xl mx-auto p-6 md:p-10">
+    <section className="">
+      <div className=" relative ">  
+       <div className="absolute top-70 bottom-80 -left-24 inset-0  circle z-0 "></div>
+       </div>
+    
+    <div className="flex flex-col-reverse  py-20 lg:flex-row items-center gap-10 max-w-5xl mx-auto p-6 md:p-10">
       {/* Left Content */}
       <div className="lg:w-1/2 text-center lg:text-left">
         <h2 className="text-3xl md:text-4xl font-bold leading-tight">
@@ -20,7 +25,7 @@ export default function Visibility() {
           {nftData.description}
         </p>
         <button
-          className="mt-6 px-6 py-3 flex gap-2 text-white bg-red-600 rounded-lg hover:bg-red-700 transition focus:ring-4 focus:ring-red-500"
+          className=" bg-gradient mt-6 px-6 py-3 flex gap-2 text-white  rounded-lg hover:bg-red-700 transition focus:ring-4 focus:ring-red-500"
           aria-label="Boost your NFT"
         >
           Booster <span><img src="/assets/icons/Booster.png"/></span> 
@@ -36,5 +41,6 @@ export default function Visibility() {
         />
       </div>
     </div>
+    </section>
   );
 }

@@ -4,14 +4,14 @@ import React from "react";
 
 const ArtworkCard = ({ artwork }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-4 w-80">
-      <div className="grid grid-cols-2 gap-4">
+    <div className="bg-white rounded-2xl shadow-lg p-2 w-80">
+      <div className="grid grid-cols-2 gap-1 bg-[#E7E7E7] px-4 py-3 rounded-md ">
         {/* First row with 2 images */}
         {artwork.images.slice(0, 2).map((img, index) => (
           <img key={index} src={img} alt={`artwork-${index}`} className="rounded-lg w-full h-24 object-cover col-span-1" />
         ))}
         {/* Second row with 4 images */}
-        <div className="grid grid-cols-4 gap-4 col-span-2">
+        <div className="grid grid-cols-4 gap-2 col-span-2">
           {artwork.images.slice(2, 6).map((img, index) => (
             <img key={index} src={img} alt={`artwork-${index}`} className="rounded-lg w-full h-20 object-cover" />
           ))}
@@ -80,10 +80,17 @@ const Collection = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center">
-   <div className="flex justify-between items-center mb-4">
-        <h2 className="text-6xl font-bold sm: text-xl">Top Collection</h2>
-        <a href="#" className="text-red-500 font-semibold font-[Roboto]">View All</a>
+    <section className=" ">
+        <div className=" relative top-0 bottom-16 left-0">  
+       <div className="absolute inset-0  circle  red blur z-0 "></div>
+       </div>
+       
+    <div className="flex flex-col py-24 ">
+    <div className="flex justify-around items-center mb-6 ">
+        <h2 className="text-4xl font-bold"> Top Collection</h2>
+        <a href="#" className="text-red-500 font-semibold font-[Roboto]">
+          View More Collection
+        </a>
       </div>
       <div className="flex flex-wrap gap-6 justify-center">
         {artworks.map((artwork, index) => (
@@ -92,6 +99,7 @@ const Collection = () => {
       </div>
       
     </div>
+    </section>
   );
 };
 

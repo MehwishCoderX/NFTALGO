@@ -23,6 +23,10 @@ const nfts = [
 
 const TopSeller = () => {
   return (
+    <section>
+        <div className=" relative top-0 bottom-16 left-[1000px]">  
+       <div className="absolute inset-0  circle  red blur z-0 "></div>
+       </div>
     <div className="px-4 py-16 md:px-12 lg:px-32">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">Top Seller</h2>
@@ -51,6 +55,7 @@ const TopSeller = () => {
         ))}
       </div>
     </div>
+    </section>
   );
 };
 

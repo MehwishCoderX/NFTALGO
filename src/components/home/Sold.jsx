@@ -14,7 +14,11 @@ const nftData = [
 
 const Sold = () => {
   return (
-    <div className="relative w-full max-w-6xl mx-auto p-10">
+    <section className=''>
+        <div className=" relative top-0 bottom-16 left-[1000px] ">  
+       <div className="absolute inset-0  circle  red blur z-0 "></div>
+       </div>
+    <div className="relative w-full max-w-6xl mx-auto p-10 py-24">
       <h1 className="text-4xl font-bold mb-8 text-left">Recently Sold</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -42,15 +46,15 @@ const Sold = () => {
 
               {/* Buy Overlay Section */}
               <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[90%] flex justify-between font-[Roboto] items-center gap-2   p-2 rounded-lg">
-                <button className="bg-red-500 text-white px-4 py-1 rounded-md">Buy</button>
-                <div className="flex items-center  bg-white shadow-2xl rounded-md px-4 py-1">
-                  <span className="text-[10px ] font-semibold">Price:</span>
+                <button className="bg-red-500 text-white px-4  text-sm py-1 rounded-md">Buy</button>
+                <div className="flex items-center  bg-white shadow-2xl rounded-md px-2 py-1">
+                  <span className="text-gray-700 text-sm font-semibold">Price:</span>
                   <img
                   src="/assets/images/price.png"
                   alt="crypto"
                   className="w-4 h-4 ml-1"
                 />
-                  <span className="ml-1 font-bold">{nft.price}</span>
+                <span className="ml-1 text-black text-sm">{nft.price}</span>
                 
                 </div>
               </div>
@@ -59,6 +63,7 @@ const Sold = () => {
         ))}
       </div>
     </div>
+    </section>
   );
 };
 

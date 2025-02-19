@@ -10,6 +10,7 @@ import AuctionImg5 from "/assets/images/Auction5.png";
 import AuctionImg6 from "/assets/images/Auction6.png";
 import AuctionImg7 from "/assets/images/Auction7..png";
 import AuctionImg8 from "/assets/images/Auction8.png";
+import Button from '../shared/Button'
 
 const nftData = [
   { id: 1, image: AuctionImg1, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
@@ -26,9 +27,27 @@ const nftData = [
 
 export default function Auction() {
   return (
-    <div className="relative w-full max-w-6xl mx-auto p-10">
+    <section className="">
+        <div className=" relative ">  
+       <div className="absolute top-80 bottom-80 left-96 right-96 inset-0  circle z-0 "></div>
+       </div>
+    <div className="relative w-full max-w-6xl mx-auto p-10 py-24">
       {/* Section Title */}
-      <h1 className="text-4xl font-bold mb-8 text-left">Auction</h1>
+     <div className=" flex justify-between md:flex justify-between">
+
+     <h1 className="text-4xl font-bold mb-8 text-left">Auction</h1>
+      <Button 
+      text={'Last 30 Minutes'}
+      height={50}
+      width={200}
+      className={'font-[Roboto] flex  flex-row-reverse items-center gap-x-2 px-4 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition'}
+      img={'/assets/icons/tredin-btn-icon.png'}
+
+      
+      
+      
+      ></Button>
+     </div>
 
       {/* NFT Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -54,10 +73,33 @@ export default function Auction() {
               
           
             </div>
+
+         
           </div>
+          
         ))}
-      </div>
+         </div>
     </div>
+    <div className="flex justify-center items-center">
+         {/* <Button text={'Explore more '} 
+         img={'./assets/icons/explore.png'}
+        imgClass={''}
+         
+         className='bg-gradient mx-auto text-white rounded-sm shadow-md' height={58}  width={200}></Button> */}
+
+<Button
+  className="bg-gradient font-[Roboto] hover:from-red-600 hover:to-red-700 text-white  rounded-md shadow-md px-6 py-3 flex items-center flex-row-reverse justify-center gap-2"
+  height={58}
+  width={200}
+  text={'Explore More'}
+  img={'./assets/icons/explore.png'}
+  imgClass={'w-4 h-4 '}
+>
+ 
+</Button>
+
+         </div> 
+    </section>
   );
 }
 

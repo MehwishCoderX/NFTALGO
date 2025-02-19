@@ -32,6 +32,10 @@ export default function FAQ() {
   };
 
   return (
+    <section>
+       <div className=" relative ">  
+       <div className="absolute top-70 bottom-80 left-[1100px] inset-0  circle z-0 "></div>
+       </div>
     <div className="max-w-2xl mx-auto p-24">
       <h2 className="text-3xl font-bold text-black mb-6 text-center">
         Frequently Asked Questions
@@ -42,7 +46,7 @@ export default function FAQ() {
             <button
               onClick={() => toggleFAQ(index)}
               className={`w-full text-left px-4 py-3 flex items-center ${
-                openIndex === index ? "bg-red-300 rounded-xl m-1 w-[80%] mr-11 text-white" : " text-black"
+                openIndex === index ? "bg-red-100 bg-opacity-10 rounded-xl m-1 w-[80%] mr-11" : " text-black"
               }`}
               aria-expanded={openIndex === index}
               aria-controls={`faq-${index}`}
@@ -65,5 +69,6 @@ export default function FAQ() {
         ))}
       </div>
     </div>
+    </section>
   );
 }

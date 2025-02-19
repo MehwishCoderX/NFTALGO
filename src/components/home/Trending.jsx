@@ -26,12 +26,16 @@ const nftData = [
 export default function Trending() {
   return (
     <>
-    <div className=" relative -ml-24">  
+   
+       <section >
+       <div className=" relative -ml-24">  
        <div className="absolute inset-0  circle  red blur z-0 "></div>
        </div>
-    <div className="relative w-full max-w-6xl mx-auto p-10">
+
+    <div className="relative w-full max-w-6xl mx-auto p-10 py-24">
        
       {/* Section Title */}
+     
       <h1 className="text-4xl font-bold mb-8 text-left md:text-4xl sm:text-2xl">Trending NFT'S</h1>
 
       {/* NFT Grid */}
@@ -54,15 +58,16 @@ export default function Trending() {
               {/* Buy Overlay Section */}
               <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 w-[90%] flex justify-between font-[Roboto] items-center gap-2   p-2 rounded-lg">
                 <button className="bg-red-500 text-white px-4 py-1 rounded-md">Buy</button>
-                <div className="flex items-center  bg-white shadow-2xl rounded-md px-4 py-1">
-                  <span className="text-[10px ] font-semibold">Price:</span>
+                <div className="bg-white p-2 rounded-lg shadow-sm flex items-center">
+                  <span className="text-gray-700 text-sm font-semibold">Price:</span>
                   <img
                   src="/assets/images/price.png"
                   alt="crypto"
                   className="w-4 h-4 ml-1"
                 />
-                  <span className="ml-1 font-bold">{nft.price}</span>
-                
+                <span className="ml-1 text-black text-sm">{nft.price}</span>
+                  {/* <span className="">{nft.price}</span>
+                 */}
                 </div>
               </div>
             </div>
@@ -70,6 +75,7 @@ export default function Trending() {
         ))}
       </div>
     </div>
+    </section>
     </>
   );
 }
