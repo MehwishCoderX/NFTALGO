@@ -119,9 +119,13 @@ export default function Auction() {
                 />
 
                 {/* Buy Overlay Section */}
-                {/* <div className="absolute bottom-30 left-32 transform -translate-x-1/2 w-[90%] flex justify-between items-center md p-2 rounded-lg">
-                <button className=" bg-white  text-gray-600 px-4 py-1 rounded-md">3:06:59:18</button>
-                </div> */}
+                <div className="absolute bottom-30 left-32 transform -translate-x-1/2 w-[90%] flex justify-between items-center md p-2 rounded-lg">
+               
+                <Button text={'3:06:59:18'} 
+                  className={'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black px-4 py-2 rounded-md font-bold'}   >
+
+                  </Button> 
+                </div>
               </div>
             </div>
           ))}

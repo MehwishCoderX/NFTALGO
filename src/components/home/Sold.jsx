@@ -4,7 +4,7 @@ import FeaturedImg1 from "/assets/images/featured1.png";
 import FeaturedImg2 from "/assets/images/featured2.png";
 import FeaturedImg3 from "/assets/images/featured3.png";
 import FeaturedImg4 from "/assets/images/featured4.png";
-
+import Button from '../shared/Button'
 const nftData = [
   { id: 1, image: FeaturedImg1, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02", sold: true },
   { id: 2, image: FeaturedImg2, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02", sold: false },
@@ -39,9 +39,12 @@ const Sold = () => {
 
               {/* Sold Button */}
               {nft.sold && (
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 text-white px-4 py-2 rounded-md font-bold">
-                  Sold
-                </div>
+              
+                  <Button text={'Sold'} 
+                  className={'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient text-white px-4 py-2 rounded-md font-bold'}   >
+
+                  </Button>  
+                
               )}
 
               {/* Buy Overlay Section */}
