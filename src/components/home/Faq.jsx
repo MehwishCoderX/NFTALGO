@@ -51,7 +51,7 @@ export default function FAQ() {
               aria-expanded={openIndex === index}
               aria-controls={`faq-${index}`}
             >
-              <span className="mr-2">
+              <span className="mr-2  font-semibold text-xl">
                 {openIndex === index ? "−" : "+"}
               </span>
               <span className="font-semibold">{faq.question}</span>

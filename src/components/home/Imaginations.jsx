@@ -1,80 +1,127 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+// import React from "react";
+// import Button from '../shared/Button'
 
-const nftData = [
-  { id: 1, image: "/images/nft1.png", alt: "NFT 1" },
-  { id: 2, image: "/images/nft2.png", alt: "NFT 2" },
-  { id: 3, image: "/images/nft3.png", alt: "NFT 3" },
-  { id: 4, image: "/images/nft4.png", alt: "NFT 4" },
-  { id: 5, image: "/images/nft5.png", alt: "NFT 5" },
-  { id: 6, image: "/images/nft6.png", alt: "NFT 6" },
-  { id: 7, image: "/images/nft7.png", alt: "NFT 7" },
-  { id: 8, image: "/images/nft8.png", alt: "NFT 8" },
+
+// const avatars = [
+//   { src: "/assets/images/Imagination1.png", top: "10%", left: "20%"  },
+//   { src: "/assets/images/Imagination2.png", top: "30%", left: "5%" },
+//   { src: "/assets/images/Imagination3.png", top: "70%", left: "15%" },
+//   { src: "/assets/images/Imagination4.png", top: "90%", left: "50%" },
+//   { src: "/assets/images/Imagination5.png", top: "20%", left: "80%" },
+//   { src: "/assets/images/Imagination6.png", top: "60%", left: "85%" },
+// ];
+// const ImageGenerator = () => {
+//   return (
+
+//     <section className="py-24">
+
+//        <div className=" text-center px-36">
+//         <h1 className=" text-6xl">Turn your imagination into digital Asset </h1>
+//       </div>
+//     <div className="relative w-full h-screen flex items-center justify-center px-36">
+//       {/* Red glowing effect */}
+    
+
+//       {/* Input section */}
+     
+//       <div className="relative z-10 flex items-center gap-3.5  py-4 rounded-lg shadow-lg font-[Roboto]">
+//         <input
+//           type="text"
+//           placeholder="Fantasy Creature holding a sword..."
+//           className="outline-none border-none px-4 w-[400px]"
+//         />
+//      <Button
+//           className="bg-gradient font-[Roboto] hover:from-red-600 hover:to-red-700 text-white p-4 mx-6 rounded-md shadow-md px-6 py-3 flex items-center flex-row-reverse justify-center gap-2"
+//           height={45}
+//           width={150}
+        
+//           text={"Generate"}
+//           img={"./assets/icons/imag-input-icon.png"}
+//           imgClass={"w-5 h-5  "}
+//         ></Button>
+//       </div>
+
+//       {/* Floating avatar images */}
+//       <div className="absolute flex flex-wrap w-full h-full ">
+//         {avatars.map((avatar, index) => (
+//           <div
+//             key={index}
+//             className="absolute  p-1 rounded-lg shadow"
+//             style={{ top: avatar.top, left: avatar.left }}
+//           >
+//             <img src={avatar.src} alt="Avatar" className="w-36 h-36" />
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//     </section>
+//   );
+// };
+
+
+
+// export default ImageGenerator;
+
+import React from "react";
+import Button from '../shared/Button'
+
+
+const avatars = [
+  { src: "/assets/images/Imagination1.png", top: "10%", left: "20%"  },
+  { src: "/assets/images/Imagination2.png", top: "30%", left: "5%" },
+  { src: "/assets/images/Imagination3.png", top: "70%", left: "15%" },
+  { src: "/assets/images/Imagination4.png", top: "90%", left: "50%" },
+  { src: "/assets/images/Imagination5.png", top: "20%", left: "80%" },
+  { src: "/assets/images/Imagination6.png", top: "60%", left: "85%" },
 ];
-
-export default function GenerateNFT() {
-  const [prompt, setPrompt] = useState("");
-  const [generatedNFTs, setGeneratedNFTs] = useState([]);
-
-  const handleGenerate = () => {
-  
-  };
-
+const ImageGenerator = () => {
   return (
-    <div className="flex flex-col items-center text-center p-6">
-      {/* Input and Generate Button */}
-      <div className="relative flex items-center w-full max-w-lg bg-white shadow-lg rounded-full overflow-hidden">
+
+    <section className="py-24">
+
+       <div className=" text-center px-36">
+        <h1 className=" text-6xl">Turn your imagination into digital Asset </h1>
+      </div>
+    <div className="relative w-full h-screen flex items-center justify-center px-36">
+      {/* Red glowing effect */}
+    
+
+      {/* Input section */}
+     
+      <div className="relative z-10 flex items-center gap-3.5  py-4 rounded-lg shadow-lg font-[Roboto]">
         <input
           type="text"
-          value={prompt}
-          onChange={(e) => setPrompt(e.target.value)}
           placeholder="Fantasy Creature holding a sword..."
-          className="w-full p-3 pl-5 text-gray-800 focus:outline-none"
-          aria-label="NFT prompt input"
+          className="outline-none border-none px-4 w-[400px]"
         />
-        <button
-          onClick={handleGenerate}
-          className="px-6 py-3 bg-red-600 text-white font-semibold rounded-r-full hover:bg-red-700 transition"
-          aria-label="Generate NFT"
-        >
-          Generate 
-        </button>
+     <Button
+          className="bg-gradient font-[Roboto] hover:from-red-600 hover:to-red-700 text-white p-4 mx-6 rounded-md shadow-md px-6 py-3 flex items-center flex-row-reverse justify-center gap-2"
+          height={45}
+          width={150}
+        
+          text={"Generate"}
+          img={"./assets/icons/imag-input-icon.png"}
+          imgClass={"w-5 h-5  "}
+        ></Button>
       </div>
 
-      {/* Animated NFT Grid */}
-      <motion.div
-        className="grid grid-cols-3 md:grid-cols-4 gap-6 mt-8"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        {generatedNFTs.length > 0
-          ? generatedNFTs.map((nft) => (
-              <motion.div
-                key={nft.id}
-                className="bg-white p-2 rounded-lg shadow-lg"
-                whileHover={{ scale: 1.05 }}
-              >
-                <img
-                  src={nft.image}
-                  alt={nft.alt}
-                  className="w-24 h-24 rounded-lg"
-                />
-              </motion.div>
-            ))
-          : nftData.map((nft) => (
-              <motion.div
-                key={nft.id}
-                className="bg-white p-2 rounded-lg shadow-lg opacity-50"
-              >
-                <img
-                  src={nft.image}
-                  alt={nft.alt}
-                  className="w-20 h-20 rounded-lg"
-                />
-              </motion.div>
-            ))}
-      </motion.div>
+      {/* Floating avatar images */}
+      <div className="absolute flex flex-wrap w-full h-full ">
+        {avatars.map((avatar, index) => (
+          <div
+            key={index}
+            className="absolute  p-1 rounded-lg shadow"
+            style={{ top: avatar.top, left: avatar.left }}
+          >
+            <img src={avatar.src} alt="Avatar" className="w-36 h-36" />
+          </div>
+        ))}
+      </div>
     </div>
+    </section>
   );
-}
+};
+
+
+
+export default ImageGenerator;

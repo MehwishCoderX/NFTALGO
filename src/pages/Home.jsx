@@ -23,7 +23,7 @@ const Home = () => {
       <Auction/>
       <Collection/>
       <Sold/>
-      {/* <Imaginations/> */}
+      <Imaginations/>
       <Visibility/>
       <Faq/>
       {/* <Footer/> */}

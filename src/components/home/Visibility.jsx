@@ -1,4 +1,5 @@
 import React from "react";
+import Button from '../shared/Button'
 
 const nftData = {
   title: "Boost Your NFTs: Enhance Visibility and Value",
@@ -24,12 +25,16 @@ export default function Visibility() {
         <p className="text-gray-400 mt-4 font-[Roboto] text-sm md:text-base">
           {nftData.description}
         </p>
-        <button
-          className=" bg-gradient mt-6 px-6 py-3 flex gap-2 text-white  rounded-lg hover:bg-red-700 transition focus:ring-4 focus:ring-red-500"
-          aria-label="Boost your NFT"
-        >
-          Booster <span><img src="/assets/icons/Booster.png"/></span> 
-        </button>
+      
+        <Button
+          className="bg-gradient font-[Roboto] hover:from-red-600 hover:to-red-700 text-white mt-6 rounded-md shadow-md px-6 py-3 flex items-center flex-row-reverse justify-center gap-2"
+          height={55}
+          width={200}
+          text={"Boost"}
+          img={"./assets/icons/Booster.png"}
+          imgClass={"w-5 h-5 "}
+        ></Button>
+      
       </div>
 
       {/* Right NFT Card Preview */}
