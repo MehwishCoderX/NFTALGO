@@ -66,8 +66,7 @@ export default function Trending() {
                   className="w-4 h-4 ml-1"
                 />
                 <span className="ml-1 text-black text-sm">{nft.price}</span>
-                  {/* <span className="">{nft.price}</span>
-                 */}
+                  
                 </div>
               </div>
             </div>
