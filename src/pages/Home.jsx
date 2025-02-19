@@ -14,7 +14,7 @@ import Navbar from '../components/layout/Navbar'
 
 const Home = () => {
   return (
-    <main>
+    <main className=' overflow-x-hidden sm:overflow-x-hidden'>
       <Navbar/>
       <HeroSection/>
       <Featured/>
