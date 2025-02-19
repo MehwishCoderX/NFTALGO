@@ -78,9 +78,12 @@ const ImageGenerator = () => {
   return (
 
     <section className="py-24">
-
-       <div className=" text-center px-36">
-        <h1 className=" text-6xl">Turn your imagination into digital Asset </h1>
+  
+       <div className=" text-center px-36 ">
+       <div className=" relative ">
+        <div className="absolute top-80 bottom-80 left-48 right-96 inset-0  circle -z-1 "></div>
+      </div>
+        <h1 className=" text-6xl uppercase">Turn your imagination into digital Asset </h1>
       </div>
     <div className="relative w-full h-screen flex items-center justify-center px-36">
       {/* Red glowing effect */}
@@ -88,11 +91,11 @@ const ImageGenerator = () => {
 
       {/* Input section */}
      
-      <div className="relative z-10 flex items-center gap-3.5  py-4 rounded-lg shadow-lg font-[Roboto]">
+      <div className="relative bg-white z-10 flex items-center gap-3.5  py-4 rounded-lg shadow-lg font-[Roboto]">
         <input
           type="text"
           placeholder="Fantasy Creature holding a sword..."
-          className="outline-none border-none px-4 w-[400px]"
+          className="outline-none border-none px-4 w-[400px] "
         />
      <Button
           className="bg-gradient font-[Roboto] hover:from-red-600 hover:to-red-700 text-white p-4 mx-6 rounded-md shadow-md px-6 py-3 flex items-center flex-row-reverse justify-center gap-2"
