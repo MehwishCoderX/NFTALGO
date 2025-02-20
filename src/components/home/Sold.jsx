@@ -1,15 +1,20 @@
 
 import React from "react";
-import FeaturedImg1 from "/assets/images/featured1.png";
-import FeaturedImg2 from "/assets/images/featured2.png";
-import FeaturedImg3 from "/assets/images/featured3.png";
-import FeaturedImg4 from "/assets/images/featured4.png";
+import SoldImg1 from "/assets/images/Sold1.png";
+import SoldImg2 from "/assets/images/Sold2.png";
+import SoldImg3 from "/assets/images/Sold3.png";
+import SoldImg4 from "/assets/images/Sold4.png";
+import SoldImg5 from "/assets/images/Sold5.png";
+import SoldImg6 from "/assets/images/Sold6.png";
+import SoldImg7 from "/assets/images/Sold7.png";
+import SoldImg8 from "/assets/images/Sold8.png";
+
 import Button from "../shared/Button";
 import Card from "../shared/Card";
 const nftData = [
   {
     id: 1,
-    image: FeaturedImg1,
+    image: SoldImg1,
     name: "STELLA NOVA",
     username: "@Stella Nova",
     price: "142.02",
@@ -17,15 +22,15 @@ const nftData = [
   },
   {
     id: 2,
-    image: FeaturedImg2,
+    image: SoldImg2,
     name: "STELLA NOVA",
     username: "@Stella Nova",
     price: "142.02",
-    sold: false,
+    sold: true,
   },
   {
     id: 3,
-    image: FeaturedImg3,
+    image: SoldImg3,
     name: "STELLA NOVA",
     username: "@Stella Nova",
     price: "142.02",
@@ -33,11 +38,43 @@ const nftData = [
   },
   {
     id: 4,
-    image: FeaturedImg4,
+    image: SoldImg4,
     name: "STELLA NOVA",
     username: "@Stella Nova",
     price: "142.02",
-    sold: false,
+    sold: true,
+  },
+  {
+    id: 5,
+    image: SoldImg5,
+    name: "STELLA NOVA",
+    username: "@Stella Nova",
+    price: "142.02",
+    sold: true,
+  },
+  {
+    id: 6,
+    image: SoldImg6,
+    name: "STELLA NOVA",
+    username: "@Stella Nova",
+    price: "142.02",
+    sold: true,
+  },
+  {
+    id: 7,
+    image: SoldImg7,
+    name: "STELLA NOVA",
+    username: "@Stella Nova",
+    price: "142.02",
+    sold: true,
+  },
+  {
+    id: 8,
+    image: SoldImg8,
+    name: "STELLA NOVA",
+    username: "@Stella Nova",
+    price: "142.02",
+    sold: true,
   },
 ];
 

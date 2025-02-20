@@ -9,6 +9,7 @@ import AuctionImg7 from "/assets/images/Auction7.png";
 import AuctionImg8 from "/assets/images/Auction8.png";
 import Button from "../shared/Button";
 import Card from "../shared/Card";
+import { motion } from "framer-motion";
 
 const nftData = [
   { id: 1, image: AuctionImg1, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
@@ -39,16 +40,38 @@ export default function Auction() {
       {/* NFT Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {nftData.map((nft) => (
-          <div key={nft.id} className="relative" 
+          <div
+            key={nft.id}
+            className="relative"
             onMouseEnter={() => setHoveredId(nft.id)}
             onMouseLeave={() => setHoveredId(null)}
           >
             <Card image={nft.image} name={nft.name} username={nft.username} />
-            <div className="absolute top-auto bottom-[35%] left-[30%] right-auto flex items-center justify-center">
-              {hoveredId === nft.id ? (
-                <Button text={"Place a bid"} className="bg-gradient text-white px-4 py-2 rounded-md font-bold transition font-[Roboto]" />
-              ) : (
-                <Button text={"3:06:59:18"} className="bg-white bg-opacity-80 text-black px-4 py-2 rounded-md font-bold" />
+
+            <div className="absolute bottom-[35%] left-[30%] flex items-center justify-center">
+              {/* Countdown Button (Lowers on hover) */}
+              <motion.div
+                initial={{ y: 0 }}
+                animate={{ y: hoveredId === nft.id ? 30 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <Button
+                  text={"3:06:59:18"}
+                  className="bg-white bg-opacity-80 text-black px-4 py-2 rounded-md font-bold"
+                />
+              </motion.div>
+
+              {/* Bid Button (Slides in from bottom) */}
+              {hoveredId === nft.id && (
+                <motion.div
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={{ y: 10, opacity: 1 }}
+                  exit={{ y: 70, opacity: 0 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className="absolute"
+                >
+                      <Button className=" font-[Roboto] bg-gradient text-xs text-white rounded-md shadow-md px-6 py-3 flex items-center gap-2" text={"place  bid"}  />
+                </motion.div>
               )}
             </div>
           </div>
@@ -56,9 +79,9 @@ export default function Auction() {
       </div>
 
       {/* Explore More Button */}
-      <div className="flex justify-center items-center mt-8">
-        <Button className="bg-gradient text-white rounded-md shadow-md px-6 py-3 flex items-center gap-2" text={"Explore More"} img={"/assets/icons/explore.png"} imgClass="w-4 h-4" />
-      </div>
+            <div className="flex justify-center items-center mt-8 font-[Roboto]">
+       <Button className="bg-gradient flex-row-reverse text-white rounded-md shadow-md px-6 py-3 flex items-center gap-2" text={"Explore More"} img={"/assets/icons/explore.png"} imgClass="w-4 h-4" />
+       </div>
     </section>
   );
 }
