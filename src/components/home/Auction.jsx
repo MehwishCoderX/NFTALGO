@@ -52,7 +52,7 @@ export default function Auction() {
               {/* Countdown Button (Lowers on hover) */}
               <motion.div
                 initial={{ y: 0 }}
-                animate={{ y: hoveredId === nft.id ? 30 : 0 }}
+                animate={{ y: hoveredId === nft.id ? 60 : 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
                 <Button
@@ -66,7 +66,7 @@ export default function Auction() {
                 <motion.div
                   initial={{ y: 100, opacity: 0 }}
                   animate={{ y: 10, opacity: 1 }}
-                  exit={{ y: 70, opacity: 0 }}
+                  exit={{ y: 100, opacity: 0 }}
                   transition={{ duration: 1, ease: "easeInOut" }}
                   className="absolute"
                 >
