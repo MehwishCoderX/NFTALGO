@@ -28,8 +28,8 @@ export default function Auction() {
   return (
     <section className="w-full max-w-6xl mx-auto p-10 py-24">
       {/* Section Title */}
-      <div className="flex justify-between">
-        <h1 className="text-4xl font-bold mb-8 text-left">Auction</h1>
+      <div className="flex justify-between flex flex-col md:flex-row justify-around items-center mb-6">
+        <h1 className="text-4xl font-bold mb-8 text-left ">Auction</h1>
         <Button
           text={"Last 30 Minutes"}
           className="h-[50px] w-[200px] font-[Roboto] flex items-center gap-x-2 px-4 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"

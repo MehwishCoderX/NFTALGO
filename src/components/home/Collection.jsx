@@ -86,9 +86,10 @@ const Collection = () => {
        </div>
        
     <div className="flex flex-col py-24 ">
-    <div className="flex justify-around items-center mb-6 ">
-        <h2 className="text-4xl font-bold"> Top Collection</h2>
-        <a href="#" className="text-red-500 font-semibold font-[Roboto]">
+    <div className="flex flex-col md:flex-row justify-around items-center mb-6">
+    <h2 className="text-3xl font-bold sm:text-4xl">Top Collection</h2>
+
+        <a href="#" className="text-red-500 font-semibold font-[Roboto] sm:text-sm">
           View More Collection
         </a>
       </div>

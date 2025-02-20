@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Section */}
-      <footer className="bg-gradient flex font-[Roboto]    text-white md: rounded-2xl font-roboto lg:mx-32 sm:mx-0  rounded-sm">
+      <footer className=" bg-gradient flex font-[Roboto]    text-white md: rounded-2xl font-roboto lg:mx-32 sm:mx-0  rounded-sm">
         
       <div className=" md:mb-0">
             <img
@@ -51,8 +51,13 @@ export default function Footer() {
         <div className="gap-20 max-w-6xl mx-auto flex flex-col md:flex-row justify-around items-center text-center md:text-left">
           
          
-          <div className=" -ml-24 mb-16 "> <img src={FooterLogo} alt="Fry Networks" className="pr-8 md:w-50" /></div>
+          {/* <div className=" lg:-ml-24  md:-ml-24 md:mb-24  sm:ml-0  sm:pt-10"> <img src={FooterLogo} alt="Fry Networks" className="pr-8 md:w-50" /></div> */}
 
+          <div className="lg:-ml-24 md:-ml-24 md:mb-24 sm:ml-0 sm:pt-10 "> 
+  <img src={FooterLogo} alt="Fry Networks" className="pr-8 md:w-50" />
+</div>
+
+          
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16 w-full ">
             <div className="flex flex-col items-center md:items-start">
              
@@ -60,7 +65,7 @@ export default function Footer() {
                 NFT ALGO is the world’s leading NFTs marketplace where you can
                 discover, sell, and bid NFTs and get rich.
               </p>
-              <div className="flex space-x-3 mt-4">
+              <div className="flex space-x-3 mt-4 ">
                 <SocialIcon Icon={FaFacebookF} />
                 <SocialIcon Icon={FaTelegramPlane} />
                 <SocialIcon Icon={FaLinkedinIn} />

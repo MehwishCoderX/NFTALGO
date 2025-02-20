@@ -13,7 +13,11 @@ const avatars = [
 
 const ImageGenerator = () => {
   return (
+  
     <section className="py-24">
+       <div className=" relative top-64 left-72">  
+       <div className="absolute inset-0  circle  red blur z-0 "></div>
+       </div>
       <div className="text-center">
         <h1 className="lg:text-6xl uppercase md:text-5xl sm:text-4xl text-3xl">
           Turn your imagination <br /> into a digital Asset
