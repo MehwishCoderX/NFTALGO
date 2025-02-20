@@ -1,20 +1,22 @@
+
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from '@mui/material';
 import { styled } from '@mui/material/styles';
+import MenuIcon from '@mui/icons-material/Menu';
 import Logo from '/assets/images/Nft-logo.png';
-// import Button from '../shared/Button'
 
 const navItems = ['Home', 'AI NFT Generation'];
 
@@ -73,7 +75,7 @@ function Navbar(props) {
     <Box sx={{ display: 'flex' }}>
       <AppBar
         position="static"
-        sx={{ backgroundColor: ' #FFF9F9', padding: '10px 0', boxShadow: 'none' }}
+        sx={{ backgroundColor: '#FFF9F9', padding: '10px 0', boxShadow: 'none' }}
       >
         <Toolbar>
           <Box
@@ -86,9 +88,9 @@ function Navbar(props) {
             }}
           >
             {/* Logo */}
-            <img src={Logo} alt="Fry Networks"  />
+            <img src={Logo} alt="Fry Networks" />
 
-            {/* Navigation Items (Hidden on small screens) */}
+            {/* Navigation Items */}
             <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
               {navItems.map((item) => (
                 <Typography
@@ -98,6 +100,11 @@ function Navbar(props) {
                     fontWeight: 'bold',
                     margin: '0 15px',
                     cursor: 'pointer',
+                    textDecoration: item === 'Home' ? 'underline' : 'none',
+                    '&:hover': {
+                      color: item === 'AI NFT Generation' ? 'red' : 'inherit',
+                      textDecoration: item === 'AI NFT Generation' ? 'underline' : 'none',
+                    },
                   }}
                 >
                   {item}
@@ -105,9 +112,8 @@ function Navbar(props) {
               ))}
             </Box>
 
-            {/* Buttons (Hidden on extra-small screens) */}
+            {/* Buttons */}
             <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 2 }}>
-              {/* <Button text=" connect wallet" className={'nav-'}></Button> */}
               <ConnectButton>Connect Wallet</ConnectButton>
               <CreateButton>Create NFT</CreateButton>
             </Box>
