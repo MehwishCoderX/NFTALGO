@@ -21,10 +21,10 @@ export default function CoverflowEffect() {
           effect={"coverflow"}
           coverflowEffect={{
             rotate: 10,
-            stretch: 50,
-            depth: 300,
+            stretch: 60,
+            depth: 250,
             modifier: 1,
-            slideShadows: true,
+            slideShadows: false,
           }}
           centeredSlides={true}
           slidesPerView={1}
@@ -46,7 +46,7 @@ export default function CoverflowEffect() {
                   src={img}
                   alt="testimonial-avatar"
                   loading="lazy"
-                  className="w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg rounded-lg shadow-lg duration-300 ease-in-out transform hover:scale-105"
+                  className="w-full max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg rounded-lg  duration-300 ease-in-out transform hover:scale-105"
                 />
               </SwiperSlide>
             )
@@ -56,3 +56,4 @@ export default function CoverflowEffect() {
     </section>
   );
 }
+

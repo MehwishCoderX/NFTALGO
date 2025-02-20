@@ -86,13 +86,16 @@ export default function Trending() {
           <div className="relative">
             <div className="grid grid-cols-1 mx-4 md:grid-cols-4 gap-2   gap-3 ">
               {nftData.map((nft) => (
+                <div key={nft.id}>
                 <Card
                   image={nft.image}
                   name={nft.name}
                   username={nft.username}
                   price={nft.price}
                   showButton={true}
+                 
                 />
+                 </div>
               ))}
             </div>
           </div>

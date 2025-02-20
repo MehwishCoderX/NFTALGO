@@ -89,7 +89,7 @@ const Sold = () => {
         <div className="relative">
           <div className=" relative grid grid-cols-1 mx-4 md:grid-cols-4 gap-2   gap-3 ">
             {nftData.map((nft) => (
-              <div className="relative">
+              <div key={nft.id} className="relative">
                 <Card
                   image={nft.image}
                   name={nft.name}
