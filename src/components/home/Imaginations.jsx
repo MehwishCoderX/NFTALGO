@@ -26,20 +26,29 @@ const ImageGenerator = () => {
 
       <div className="relative w-full h-screen flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-36">
         {/* Input section */}
-        <div className="relative bg-white z-10 px-4 flex items-center gap-3.5 py-4 rounded-lg shadow-lg font-[Roboto] w-full max-w-xl">
+        <div className="relative  bg-white z-10 px-4 flex items-center gap-3.5 py-4 rounded-lg shadow-lg font-[Roboto] w-full max-w-xl">
           <input
             type="text"
             placeholder="Fantasy Creature holding a sword..."
             className="outline-none border-none w-full px-4 py-2 text-sm sm:text-base rounded-md"
           />
-          <Button
-            className="bg-gradient font-[Roboto] hover:from-red-600 hover:to-red-700 text-white p-4 mx-2 rounded-md shadow-md px-4 py-2 flex items-center gap-2"
+          {/* <Button
+            className="  flex-row-reverse bg-gradient font-[Roboto] hover:from-red-600 hover:to-red-700 text-white p-4 mx-2 rounded-md shadow-md px-4 py-2 flex items-center gap-2"
             height={45}
             width={150}
             text={"Generate"}
             img={"./assets/icons/imag-input-icon.png"}
             imgClass={"w-5 h-5"}
-          />
+          /> */}
+          <Button
+  className="flex-row-reverse bg-gradient font-[Roboto] hover:from-red-600 hover:to-red-700 text-white p-4 mx-2 rounded-md shadow-md px-4 py-2 flex items-center gap-2 text-base sm:text-xs xs:text-xs"
+  height={45}
+  width={160}
+  text={"Generate"}
+  img={"./assets/icons/imag-input-icon.png"}
+  imgClass={"w-5 h-5"}
+/>
+
         </div>
 
         {/* Floating avatar images */}
