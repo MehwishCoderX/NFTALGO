@@ -103,6 +103,7 @@ function Navbar(props) {
                     textDecoration: item === 'Home' ? 'underline' : 'none',
                     '&:hover': {
                       color: item === 'AI NFT Generation' ? 'red' : 'inherit',
+                    
                       textDecoration: item === 'AI NFT Generation' ? 'underline' : 'none',
                     },
                   }}
