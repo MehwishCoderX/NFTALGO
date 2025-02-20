@@ -1,6 +1,4 @@
-
 import { useState } from "react";
-import stellaImg from "/assets/images/stella.png";
 import AuctionImg1 from "/assets/images/Auction1.png";
 import AuctionImg2 from "/assets/images/Auction2.png";
 import AuctionImg3 from "/assets/images/Auction3.png";
@@ -10,6 +8,7 @@ import AuctionImg6 from "/assets/images/Auction6.png";
 import AuctionImg7 from "/assets/images/Auction7.png";
 import AuctionImg8 from "/assets/images/Auction8.png";
 import Button from "../shared/Button";
+import Card from "../shared/Card";
 
 const nftData = [
   { id: 1, image: AuctionImg1, name: "STELLA NOVA", username: "@Stella Nova", price: "142.02" },
@@ -23,81 +22,43 @@ const nftData = [
 ];
 
 export default function Auction() {
-  return (
-    <section className="">
-      <div className="relative w-full max-w-6xl mx-auto p-10 py-24">
-        {/* Section Title */}
-        <div className="flex justify-between">
-          <h1 className="text-4xl font-bold mb-8 text-left">Auction</h1>
-          <Button
-            text={"Last 30 Minutes"}
-            height={50}
-            width={200}
-            className="font-[Roboto] flex items-center gap-x-2 px-4 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"
-            img={"/assets/icons/trending-btn-icon.png"}
-          />
-        </div>
+  const [hoveredId, setHoveredId] = useState(null);
 
-        {/* NFT Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {nftData.map((nft) => (
-            <NFTCard key={nft.id} nft={nft} />
-          ))}
-        </div>
-      </div>
-      
-      {/* Explore More Button */}
-      <div className="flex justify-center items-center mt-8">
+  return (
+    <section className="w-full max-w-6xl mx-auto p-10 py-24">
+      {/* Section Title */}
+      <div className="flex justify-between">
+        <h1 className="text-4xl font-bold mb-8 text-left">Auction</h1>
         <Button
-          className="bg-gradient font-[Roboto] hover:from-red-600 hover:to-red-700 text-white rounded-md shadow-md px-6 py-3 flex items-center flex-row-reverse justify-center gap-2"
-          height={58}
-          width={200}
-          text={"Explore More"}
-          img={"./assets/icons/explore.png"}
-          imgClass={"w-4 h-4"}
+          text={"Last 30 Minutes"}
+          className="h-[50px] w-[200px] font-[Roboto] flex items-center gap-x-2 px-4 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"
+          img={"/assets/icons/trending-btn-icon.png"}
         />
       </div>
+
+      {/* NFT Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        {nftData.map((nft) => (
+          <div key={nft.id} className="relative" 
+            onMouseEnter={() => setHoveredId(nft.id)}
+            onMouseLeave={() => setHoveredId(null)}
+          >
+            <Card image={nft.image} name={nft.name} username={nft.username} />
+            <div className="absolute top-auto bottom-[35%] left-[30%] right-auto flex items-center justify-center">
+              {hoveredId === nft.id ? (
+                <Button text={"Place a bid"} className="bg-gradient text-white px-4 py-2 rounded-md font-bold transition font-[Roboto]" />
+              ) : (
+                <Button text={"3:06:59:18"} className="bg-white bg-opacity-80 text-black px-4 py-2 rounded-md font-bold" />
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Explore More Button */}
+      <div className="flex justify-center items-center mt-8">
+        <Button className="bg-gradient text-white rounded-md shadow-md px-6 py-3 flex items-center gap-2" text={"Explore More"} img={"/assets/icons/explore.png"} imgClass="w-4 h-4" />
+      </div>
     </section>
-  );
-}
-
-function NFTCard({ nft }) {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <div
-      className="trend-card p-4 flex flex-col gap-2 shadow-lg rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Profile Section */}
-      <div className="flex items-center gap-3">
-        <img src={stellaImg} alt="profile" className="w-10 h-10 rounded-full" />
-        <div>
-          <p className="text-sm font-bold">{nft.name}</p>
-          <p className="text-xs text-gray-500">{nft.username}</p>
-        </div>
-      </div>
-
-      {/* NFT Image Section */}
-      <div className="relative overflow-hidden rounded-lg">
-        <img src={nft.image} alt={nft.name} className="w-full h-auto  " />
-
-        {/* Hover Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center  ">
-          {isHovered ? (
-            <Button
-              text={"Place a bid"}
-              className="bg-gradient font-[Roboto]  text-white px-4 py-2 rounded-md font-bold transition "
-            />
-          ) : (
-            <Button
-              text={"3:06:59:18"}
-              className="bg-white bg-opacity-80 text-black px-4 py-2 rounded-md font-bold"
-            />
-          )}
-        </div>
-      </div>
-    </div>
   );
 }

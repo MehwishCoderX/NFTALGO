@@ -11,6 +11,7 @@ import Visibility from '../components/home/Visibility'
 import Faq from '../components/home/Faq'
 import Footer from '../components/layout/Footer'
 import Navbar from '../components/layout/Navbar'
+import Card from '../components/shared/Card'
 
 const Home = () => {
   return (
